@@ -32,8 +32,6 @@ function NarrowItDownController(MenuSearchService) {
 	}
 	
 	menu.removeItem = function(itemIndex){
-		console.log("'this' is: ", this);
-		this.lastRemoved = "Last item removed was " + this.found[itemIndex].name;
 		menu.found.splice(itemIndex, 1);
 		menu.title = origTitle + " " + menu.getNumberOfItemsFromSearch();
 	}
