@@ -1,0 +1,16 @@
+<div class="container">
+    <h2 id="my-info-title" class="text-center">My registered information</h2>
+    <div style="margin-top: 10px;" ng-hide="myinfoCtrl.isUserRegistered()">
+        <span>Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></span>
+    </div>
+    <div style="margin-top: 10px;" ng-show="myinfoCtrl.isUserRegistered()">
+        <span>First name: {{ myinfoCtrl.user.firstname}}</span><br>
+        <span>Last name: {{ myinfoCtrl.user.lastname}}</span><br>
+        <span>Email: {{ myinfoCtrl.user.email}}</span><br>
+        <span>Phone: {{ myinfoCtrl.user.phone }}</span><br>
+        <div ng-if="myinfoCtrl.isUserRegistered() && myinfoCtrl.isMenuItemChoice()">
+            <span style="margin-bottom: 10px;">Menu item choice:</span><br>
+            <menu-item menu-item="myinfoCtrl.user.menuItem"></menu-item>
+        </div>
+    </div>
+</div>
