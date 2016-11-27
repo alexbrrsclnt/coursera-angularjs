@@ -8,11 +8,11 @@
     function SignupController($filter, MenuService){
         var signup = this;
         signup.user = {};
-        
+
         var upCase = $filter('uppercase');
         
         signup.searchMenuItem = function () {
-            signup.user.menuItem = {};
+            signup.user.menuItem = false;
             if (signup.user.menunumber){
                 signup.user.menunumber = upCase(signup.user.menunumber);
                 

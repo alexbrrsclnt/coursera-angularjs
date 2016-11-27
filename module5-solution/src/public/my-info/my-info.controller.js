@@ -23,7 +23,7 @@
         }
 
         ctrl.isMenuItemChoice = function () {
-            if (ctrl.user.menuItem.name){
+            if (typeof ctrl.user.menuItem !== 'undefined' && ctrl.user.menuItem != false) {
                 return true;
             }
             return false;
